@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPinIcon, CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 const FeaturedJob = ({ job }) => {
     const { id, job_title, company_logo, company_name, remote_or_onsite, fulltime_or_parttime, location, salary } = job
@@ -21,7 +22,7 @@ const FeaturedJob = ({ job }) => {
                 </div>
 
                 <div className="card-actions pt-3">
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to={`/${id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>
             </div>
         </div>

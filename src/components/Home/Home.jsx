@@ -6,7 +6,7 @@ import FeaturedJob from '../featuredJob/FeaturedJob';
 
 const Home = () => {
     const featuredJob=useLoaderData();
-    console.log(featuredJob)
+    
     return (
         <div>
             <Banner></Banner>

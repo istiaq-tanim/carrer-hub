@@ -12,8 +12,8 @@ const Header = () => {
             <div className='relative flex items-center justify-between'>
                 {/* Logo Section */}
                 <Link to='/' className='inline-flex items-center'>
-                    <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-                        nextPage
+                    <span className='ml-2 text-2xl font-bold tracking-wide text-gray-800'>
+                        Job<span className='text-[#1f2d91]'>Camp</span>
                     </span>
                 </Link>
 

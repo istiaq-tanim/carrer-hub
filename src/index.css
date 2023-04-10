@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[rgba(126,144,254,1)] to-[rgba(152,115,255,1)] text-[#FFFFFF] font-semibold p-3 rounded-md transition duration-200  shadow-md;
+}
+.my-container {
+  @apply px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
+}
+.active{
+    @apply font-medium tracking-wide text-cyan-600 transition-colors duration-200
+  }
+  
+  .default{
+    @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-cyan-600
+  }
+  .btn-second
+  {
+    @apply border-2 px-5 py-2 border-[rgba(126,144,254,1)] rounded-md text-[rgba(126,144,254,1)] text-lg font-semibold
+  }
+ 

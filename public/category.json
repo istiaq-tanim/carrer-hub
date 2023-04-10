@@ -1,0 +1,27 @@
+[  
+{
+    "Category":"Software Engineering",
+    "logo": "https://i.ibb.co/cxphX8j/chip-1.png",
+     "jobsAvailable": 1234,
+     "id":1
+},
+{   "Category":"Data Science",
+    "logo": "https://i.ibb.co/WfBcsbh/social-media-1.png",
+     "jobsAvailable": "5678+",
+     "id":2
+},
+{ 
+    "Category":"Marketing" ,
+     "logo": "https://i.ibb.co/DpgHC6K/accounts-1.png",
+     "jobsAvailable": 9012,
+     "id":3
+},
+{  
+    "Category":"Creative Design", 
+    "logo": "https://i.ibb.co/sbs41CB/Group-13.png",
+    "jobsAvailable": 3456,
+    "id":4
+}]
+  
+  
+  

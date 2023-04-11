@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedJob from '../featuredJob/FeaturedJob';
 
 const Jobs = () => {
+    const [show,setShow]=useState(false)
     const featuredJob=useLoaderData();
+
+    const handleShow=()=>
+    {
+        setShow(!show)
+    }
     return (
         <div>
             <div className='my-container my-10'>
@@ -12,12 +18,12 @@ const Jobs = () => {
              <div className='grid md:grid-cols-2 gap-5 mt-10'>
              {
                 
-                featuredJob.map(job => <FeaturedJob key={job.id} job={job}></FeaturedJob>)
+                featuredJob.slice(0,show?6:4).map(job => <FeaturedJob key={job.id} job={job}></FeaturedJob>)
              }
              
              </div>
              <div className='flex justify-center mt-10'>
-             <button className='btn-primary'>See All Jobs</button>
+             {!show && <button className='btn-primary' onClick={handleShow}>See All Jobs</button>}
              </div>
             </div>
         </div>

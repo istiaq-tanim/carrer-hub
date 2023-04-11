@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLoaderData } from 'react-router-dom';
 import { CalendarIcon, CurrencyDollarIcon, PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
+import { addToDb } from '../../utilities/fakedb';
 const JobDetails = () => {
     const [job, setJob] = useState({});
     const dynamic = useParams();
@@ -10,13 +11,18 @@ const JobDetails = () => {
         setJob(selectJob);
     }, [])
 
-    const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, email, phone, location } = job
+    const handleAddData = (id) =>
+    {
+        addToDb(id);
+    }
+
+    const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, email, phone, location,id } = job
     return (
         <div className='my-container mt-5'>
             <h3 className='text-[#1A1919] text-center my-10 text-2xl font-bold'>Job Details</h3>
 
             <div className='grid grid-cols-3 gap-4'>
-                <div class="col-span-2">
+                <div className="col-span-2">
                     <p className='text-[rgba(117,117,117,1)] my-5'><span className='font-bold text-[#1A1919]'>Job Description :</span> {job_description}</p>
                     <p className='text-[rgba(117,117,117,1)] my-5'><span className='font-bold text-[#1A1919]'>Job Description :</span> {job_responsibility}</p>
                     <span className='font-bold text-[#1A1919]'>Educational Requirements:</span>
@@ -44,7 +50,7 @@ const JobDetails = () => {
                         <p className='flex gap-2 mt-5 font-bold'><span><MapPinIcon className="h-6 w-6 text-[rgba(126,144,254,1)]" /></span>Address : <span className='text-[rgba(117,117,117,1)] font-medium'>{location}</span></p>
                     </div>
                 </div>
-                <button className='btn-primary w-full mt-5'>Apply Now</button>
+                <button onClick={() => handleAddData(id)} className='btn-primary w-full mt-5'>Apply Now</button>
                 </div>
                 
             </div>

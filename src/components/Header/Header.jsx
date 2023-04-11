@@ -72,8 +72,8 @@ const Header = () => {
                                     <div>
                                         <Link to='/' className='inline-flex items-center'>
 
-                                            <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
-                                                nextPage
+                                            <span className='ml-2 text-2xl font-bold tracking-wide text-gray-800'>
+                                                Job<span className='text-[#1f2d91]'>Camp</span>
                                             </span>
                                         </Link>
                                     </div>
@@ -90,12 +90,23 @@ const Header = () => {
                                 </div>
                                 {/* Mobile Nav Items Section */}
                                 <nav>
-                                    <ul className='space-y-4'>
+                                    <ul className='space-y-3'>
                                         <li>
                                             <Link to='/' className='default'>
                                                 Home
                                             </Link>
                                         </li>
+                                        <li>
+                                            <Link to='/statistic' className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'>
+                                                Statistic
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to='/jobs' className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'>
+                                                Applied Job
+                                            </Link>
+                                        </li>
+
                                         <li>
                                             <Link
                                                 to='/books'

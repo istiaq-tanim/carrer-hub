@@ -27,7 +27,7 @@ const ReviewJobs = ({ job }) => {
                     
                 </div>
                 <div className="md:pt-20 pt-5" >
-                    <button>Something</button>
+                <Link to={`/${id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>
                 </div>
                 

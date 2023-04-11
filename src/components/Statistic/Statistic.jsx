@@ -4,14 +4,14 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 const Statistic = () => {
     const assignments =
         [
-            { name: 'Assignment 1', number: 57 },
-            { name: 'Assignment 2', number: 60 },
+            { name: 'Assignment 1', number: 52 },
+            { name: 'Assignment 2', number: 55 },
             { name: 'Assignment 3', number: 60 },
-            { name: 'Assignment 4', number: 60 },
-            { name: 'Assignment 5', number: 60 },
-            { name: 'Assignment 6', number: 60 },
-            { name: 'Assignment 7', number: 60 },
-            { name: 'Assignment 8', number: 60 }
+            { name: 'Assignment 4', number: 50 },
+            { name: 'Assignment 5', number: 40 },
+            { name: 'Assignment 6', number: 55 },
+            { name: 'Assignment 7', number: 50 },
+            { name: 'Assignment 8', number: 40 }
         ];
 
     return (

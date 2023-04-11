@@ -9,7 +9,7 @@ const Banner = () => {
                 <button className='btn-primary mt-5'>Get Started</button>
             </div>
             <div>
-                <img className='h-fit w-fit' src="../../../public/banner.png" alt="" />
+                <img className='h-fit w-fit' src="https://i.ibb.co/6g8PkbK/P3-OLGJ1-copy-1.png/>"/>
             </div>
         </div>
     );

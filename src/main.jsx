@@ -14,35 +14,35 @@ import JobDetails from './components/JobDetails/JobDetails';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Statistic from './components/Statistic/Statistic';
 
-const router =createBrowserRouter([
+const router = createBrowserRouter([
   {
-    path:"/",
-    element:<Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        path:"/",
-        element:<Home></Home>,
-        loader:()=>fetch("featuredJob.json")
-        
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("featuredJob.json")
+
       },
       {
-          path:"/:id",
-          element:<JobDetails></JobDetails>,
-          loader:({params})=>fetch("/featuredJob.json")
+        path: "/statistic",
+        element: <Statistic></Statistic>
       },
       {
-        path:"/statistic",
-        element:<Statistic></Statistic>
+        path: "/jobs",
+        element: <AppliedJobs></AppliedJobs>,
+        loader: () => fetch("featuredJob.json")
+      }, 
+      {
+        path: "/:id",
+        element: <JobDetails></JobDetails>,
+        loader: ({ params }) => fetch("/featuredJob.json")
       },
       {
-         path:"/jobs",
-         element:<AppliedJobs></AppliedJobs>,
-         loader:()=>fetch("featuredJob.json")
-      },
-      {
-        path:"/blogs",
-        element:<Blogs></Blogs>
+        path: "/blogs",
+        element: <Blogs></Blogs>
       }
 
     ]

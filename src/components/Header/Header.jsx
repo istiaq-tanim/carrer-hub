@@ -115,14 +115,6 @@ const Header = () => {
                                                 Blogs
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link
-                                                to='/about'
-                                                className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                            >
-                                                About Us
-                                            </Link>
-                                        </li>
                                     </ul>
                                 </nav>
                             </div>

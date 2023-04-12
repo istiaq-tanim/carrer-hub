@@ -15,27 +15,15 @@ const JobDetails = () => {
     {
         addToDb(id);
     }
-    // const handleChangeRemote = () => 
-    // {
-    //     setIsSorted(true);
-    //     const filtered=jobs.filter(job=>job.remote_or_onsite === "Remote");
-    //     setFilterJob(filtered);
-       
-    // }
     
-    // const handleChangeOnsite = () => {
-    //     setIsSorted(true);
-    //     const filtered=jobs.filter(job=>job.remote_or_onsite === "Onsite");
-    //     setFilterJob(filtered); 
-    // }
-
-    // <button onClick={handleChange} className='btn-primary'>Remote</button>
-    //                <button onClick={handleChange} className='btn-primary'>Onsite</button>
-
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, email, phone, location,id } = job
     return (
         <div className='my-container mt-5'>
-            <h3 className='text-[#1A1919] text-center my-10 text-2xl font-bold'>Job Details</h3>
+            <div className='back-ground h-60 mb-20 w-full flex flex-rows justify-center items-center relative'>
+            <h3 className="text-center font-bold text-2xl text-[rgba(26,25,25,1)]">Applied Jobs</h3>
+            <img className='w-80 absolute left-0 bottom-0' src="https://i.ibb.co/74JdqdH/Vector.png"/>
+            <img className='w-80 absolute right-0 top-0' src="https://i.ibb.co/b5N9BQt/Vector-1.png"/>
+            </div>
 
             <div className='grid grid-cols-3 gap-4'>
                 <div className="col-span-2">

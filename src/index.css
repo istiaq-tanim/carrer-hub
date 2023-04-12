@@ -5,6 +5,10 @@
 .btn-primary {
   @apply bg-gradient-to-r from-[rgba(126,144,254,1)] to-[rgba(152,115,255,1)] text-[#FFFFFF] font-semibold p-3 rounded-md transition duration-200  shadow-md;
 }
+.back-ground
+{
+  @apply bg-gradient-to-r from-[rgba(126,144,254,0.05)] to-[rgba(116,83,206,0.05)];
+}
 .my-container {
   @apply px-4 py-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8;
 }

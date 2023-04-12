@@ -53,7 +53,7 @@ const Header = () => {
                     </li>
                 </ul>
 
-                <button className='btn-primary'>Start Applying</button>
+                <button className='btn-primary'>Star Applying</button>
                 {/* Mobile Navbar Section */}
                 <div className='lg:hidden'>
                     {/* Dropdown Open Button */}

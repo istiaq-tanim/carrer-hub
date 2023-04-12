@@ -109,10 +109,10 @@ const Header = () => {
 
                                         <li>
                                             <Link
-                                                to='/books'
+                                                to='/blogs'
                                                 className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
                                             >
-                                                Books
+                                                Blogs
                                             </Link>
                                         </li>
                                         <li>

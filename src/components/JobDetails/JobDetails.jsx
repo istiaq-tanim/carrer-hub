@@ -15,6 +15,22 @@ const JobDetails = () => {
     {
         addToDb(id);
     }
+    // const handleChangeRemote = () => 
+    // {
+    //     setIsSorted(true);
+    //     const filtered=jobs.filter(job=>job.remote_or_onsite === "Remote");
+    //     setFilterJob(filtered);
+       
+    // }
+    
+    // const handleChangeOnsite = () => {
+    //     setIsSorted(true);
+    //     const filtered=jobs.filter(job=>job.remote_or_onsite === "Onsite");
+    //     setFilterJob(filtered); 
+    // }
+
+    // <button onClick={handleChange} className='btn-primary'>Remote</button>
+    //                <button onClick={handleChange} className='btn-primary'>Onsite</button>
 
     const { job_description, job_responsibility, educational_requirements, experiences, salary, job_title, email, phone, location,id } = job
     return (

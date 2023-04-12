@@ -6,7 +6,9 @@ import ReviewJobs from './../ReviewJobs/ReviewJobs';
 
 const AppliedJobs = () => {
     const [jobs, setJobs] = useState([]);
-
+    const [filterJob, setFilterJob] = useState([]);
+    const [select, setSelect] = useState("");
+    const [isSorted, setIsSorted] = useState(false);
     const allJobs = useLoaderData()
     useEffect(() => {
         const storedItem = getShoppingCart();
@@ -19,16 +21,29 @@ const AppliedJobs = () => {
         }
         setJobs(apply)
     }, [])
+
+    const handleChangeRemote = () => {
+        setIsSorted(true);
+        const filtered = jobs.filter(job => job.remote_or_onsite === "Remote");
+        setFilterJob(filtered);
+
+    }
+
+    const handleChangeOnsite = () => {
+        setIsSorted(true);
+        const filtered = jobs.filter(job => job.remote_or_onsite === "Onsite");
+        setFilterJob(filtered);
+    }
     return (
         <div className="my-container">
             <h3 className="text-center my-20 font-bold text-2xl text-[rgba(26,25,25,1)]">Applied Jobs</h3>
-            {/* <select className="select w-96 pl-50">
-                <option disabled selected>Pick your favorite Simpson</option>
-                <option>Homer</option>
-                <option>Marge</option>
-            </select> */}
+            <div className='text-right'>
+
+                <button onClick={handleChangeRemote} className='btn-primary mr-2'>Remote</button>
+                <button onClick={handleChangeOnsite} className='btn-primary'>Onsite</button>
+            </div>
             {
-                jobs.map(job => <ReviewJobs key={job.id} job={job}></ReviewJobs>)
+                isSorted ? filterJob.map(job => <ReviewJobs key={job.id} job={job}></ReviewJobs>) : jobs.map(job => <ReviewJobs key={job.id} job={job}></ReviewJobs>)
             }
         </div>
     );
